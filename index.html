@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/form.css" />
+  <link rel="stylesheet" href="styles/success.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <title>Team Project</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Team Sign Up</h1>
+      <nav id="navbar">
+        <a class="nav-item nav-item-selected" id="nav-item-basic" href="">Basic</a>
+        <a class="nav-item" id="nav-item-social" href="">Social</a>
+        <a class="nav-item" id="nav-item-certificates" href="">Certificates</a>
+      </nav>
+    </header>
+
+    <section id="basic">
+      <form id="basic-form">
+        <div class="form-item">
+          <label class="form-title" for="input-name">Full Name *</label>
+          <input class="form-input" type="text" class="" id="input-name" placeholder="Foo Bar" />
+          <p id="name-input-error-message" class="input-error-message"></p>
+        </div>
+        <div class="form-item">
+          <label class="form-title" for="input-nickname">Nickname</label>
+          <input class="form-input" type="text" class="" id="input-nickname" placeholder="Juanito" />
+          <p id="name-input-error-message" class="input-error-message"></p>
+        </div>
+        <div class="form-flex">
+          <div class="form-item form-item-email">
+            <label class="form-title" for="input-email">Email *</label>
+            <input class="form-input" type="email" id="input-email" placeholder="foo@bar.com" />
+            <p id="email-input-error-message" class="input-error-message"></p>
+          </div>
+          <div class="form-item form-item-phone">
+            <label class="form-title" for="input-phone">Phone</label>
+            <input class="form-input" id="input-phone" type="tel" onkeydown="return mascaraTelefone(event)"
+              placeholder="(83) 00000-0000" />
+          </div>
+        </div>
+        <div class="form-birthday">
+          <label class="form-title-birthday" for="">Birthday *</label>
+          <p id="age-input-error-message" class="input-error-message"></p>
+          <div class="form-flex form-date">
+            <div class="form-item form-item-day">
+              <label class="form-title" for="select-day">Day</label>
+              <select onchange="calculateAge()" id="select-day" class="form-select form-input"></select>
+            </div>
+            <div class="form-item form-item-month">
+              <label class="form-title" for="select-month">Month</label>
+              <select onchange="calculateAge()" id="select-month" class="form-select form-input"></select>
+            </div>
+            <div class="form-item form-item-year">
+              <label class="form-title" for="select-year">Year</label>
+              <select onchange="calculateAge()" id="select-year" class="form-select form-input">
+                <option value="1991">1991</option>
+              </select>
+            </div>
+            <div class="form-item form-item-age">
+              <label class="form-title" for="input-age">Age</label>
+              <input class="form-input" id="input-age" type="text" placeholder="18" disabled value="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="input-checkbox" />
+          <label for="input-checkbox">I accept the terms and privacy</label>
+        </div>
+
+        <div class="button-container">
+          <button type="button" id="basic-next-button" class="button-next button-active">
+            Next
+            <i data-feather="chevron-right" style="margin-left: 5px;"></i>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section id="social">
+      <form id="social-form">
+        <div class="form-item">
+          <label class="form-title" for="input-linkedin">Linkedin</label>
+          <input class="form-input" type="text" id="input-linkedin"
+            placeholder="https:/www.linkedin.com/in/foo-bar-3a0560104/" />
+          <p id="name-input-error-message" class="input-error-message"></p>
+        </div>
+        <div class="form-item">
+          <label class="form-title" for="input-git">Github *</label>
+          <input class="form-input" type="text" class="" id="input-git" placeholder="https://www.github.com/foobar" />
+          <p id="git-input-error-message" class="input-error-message"></p>
+        </div>
+        <div class="button-container">
+          <button type="button" id="social-next-button" class="button-next button-active">
+            Next
+            <i data-feather="chevron-right" style="margin-left: 5px;"></i>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section id="certificates">
+      <form id="certificates-form">
+        <div class="form-item form-item-flex" id="form-cert-container">
+          <label class="form-title" for="">Certificates</label>
+          <p id="certificates-input-error-message" class="input-error-message"></p>
+          <div class="form-fav-flex">
+            <input class="form-input form-input-fav" id="form-input-certificates" type="text"
+              placeholder="https:/www.github.com/foobar" />
+            <a href="#" id="heartIcon" class="img-fav-heart iheart">
+              <i data-feather="heart" id="iHeartIcon"></i>
+            </a>
+          </div>
+        </div>
+        <div class="button-container">
+          <button type="button" id="certificates-more-button" class="button-more button-active">
+
+            <img src="images/plus.svg" class="more-left" alt="Right Arrow" />
+            More
+            <img src="images/right-arrow.svg" class="more-right" alt="Right Arrow" />
+          </button>
+        </div>
+
+        <div class="form-item">
+          <label class="form-title" for="input-team">Team Name *</label>
+          <input class="form-input" type="text" id="input-team"
+            placeholder="https:/www.linkedin.com/in/foo-bar-3a0560104/" />
+          <p id="team-input-error-message" class="input-error-message"></p>
+        </div>
+        <div class="form-item">
+          <label class="form-title" for="input-institution">Institution *</label>
+          <input class="form-input" type="text" id="input-institution" placeholder="Universidade Federal da Paraíba" />
+          <p id="institution-input-error-message" class="input-error-message"></p>
+        </div>
+        <div class="form-item">
+          <label class="form-title" for="input-graduation">Graduation *</label>
+          <input class="form-input" type="text" id="input-graduation" placeholder="Ciências da Computação" />
+          <p id="graduation-input-error-message" class="input-error-message"></p>
+        </div>
+
+        <div class="button-container">
+          <button type="button" id="certificates-finish-button" class="button-finish button-active">
+            <i data-feather="check" style="margin-right: 5px;"></i>
+            Finish
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section id="success">
+      <h1>
+        Congratulations!! You were successfully registered in our system!
+      </h1>
+      <p>You can see your info down below:</p>
+      <div id="success-user-info" class="success-user-info"></div>
+      <div class="button-container">
+        <button type="submit" id="restart-button" class=" button-active" onclick="reloadPage()">
+          Add a new user!
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- SCRIPTS -->
+
+  <script>feather.replace()</script>
+  <script src="js/navigation.js"></script>
+  <script src="js/formValidation.js"></script>
+  <script src="js/manageCertificates.js"></script>
+  <script src="js/phoneMask.js"></script>
+  <script src="js/birthday.js"></script>
+  <script src="js/nextButton.js"></script>
+  <script src="js/successPage.js"></script>
+  <script src="js/localstorage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+  width: 100%;
+}
+.form-title {
+  color: #767676;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.form-input {
+  padding: 12px;
+  border: 2px solid #aaaaaa;
+  border-radius: 4px;
+  color: #111111;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.form-input::placeholder {
+  color: #767676;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.form-label-wrong {
+  color: #DC0B04;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.form-input-wrong {
+  padding: 12px;
+  border: 2px solid #DC0B04;
+  border-radius: 4px;
+}
+.input-error-message{
+  height: 18px;
+  padding-top: 4px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #DC0B04;
+}
+
+.form-flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.form-item-email {
+  width: 68%;
+}
+.form-item-phone {
+  width: 29%;
+}
+.form-title-birthday {
+  color: #767676;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.form-select {
+  background-color: #ffffff;
+  /* width: 100%; */
+  margin-right: 21px;
+  padding: 11px;
+  color: #767676;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.form-item-age {
+  width: 20%;
+}
+.form-date {
+  margin-top: 15px;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+}
+.form-checkbox input {
+  width: 20px;
+  height: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.form-checkbox label {
+  margin-left: 10px;
+  font-weight: 400;
+  color: #111111;
+  font-size: 16px;
+  line-height: 18px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.form-fav-flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-input-fav {
+  width: 92%;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.img-fav-heart {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #aaaaaa;
+  padding: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #111;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+}
+.form-input-fav-item {
+  width: 82%;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.img-fav-item {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #aaaaaa;
+  padding: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #111;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+}
+.iheart-color{
+  fill: #074ee8;
+  stroke: #074ee8;
+}
+.img-edit-item {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #aaaaaa;
+  padding: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #111;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+}
+.img-delete-item {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #aaaaaa;
+  padding: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #111;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  cursor: pointer;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 37px;
+}
+.button-active {
+  padding: 12px 15px;
+  color: #ffffff;
+  background-color: #074ee8;
+  border: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+.button-more .more-right {
+  margin-left: 10px;
+}
+.button-more .more-left {
+  margin-right: 10px;
+}
+
+.button-disabled {
+  padding: 11px 13px;
+  color: #074ee8;
+  background-color: #ffffff;
+  border: 1px solid #074ee8;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.certificate-item{
+  display: flex;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 525px) {
+  .form-flex{
+    flex-direction: column;
+  }
+  .form-item-email{
+    width: 100%;
+  }
+  .form-item-age{
+    width: 100%;
+  }
+  .form-item-phone{
+    width: 100%;
+  }
+  .form-select{
+    width: 100%;
+  }
+}
